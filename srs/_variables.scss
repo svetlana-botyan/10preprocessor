@@ -1,0 +1,49 @@
+$h_text_color: #000000;
+$p_main_text_color: #7D7987;
+$link_color:#458FF6;
+$link_hover:#ffb3df;
+$white:#ffffff;
+
+%main_p_style{
+    color: $p_main_text_color;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+}
+%main_h2_style{
+    color: $h_text_color;
+    font-size: 36px;
+    line-height: 56px;
+    font-weight: 700;
+    &::after{
+        content: '';
+        display: block;
+        height: 2px;
+        width: 56px;
+        margin-top: 26px;
+        background-color: $h_text_color;}
+}
+
+%link_style{
+    color: $link_color;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 18px 50px;
+    border: 2px solid $link_color;
+    box-sizing: border-box;
+    border-radius: 55px;
+    &:hover{
+        border: 2px solid $link_hover;
+        color: $link_hover;
+    }
+}
+
+
+@mixin flex($display:flex,$direction:row, $just_cont:space-between,$aling_items:center){
+    display: $display;
+    flex-direction:$direction;
+    justify-content: $just_cont;
+    align-items: $aling_items;
+
+}
